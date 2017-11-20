@@ -9,8 +9,7 @@ videoname=[datadir '0A/Scan Path_OA_HORZ_OA_HORZ-1-recording.mp4'];
 
 Volume=1; %1=max, 0=mute sound
 
-%FOV for SMI ETG Version 1.8
-FOV=[60 46];%[horizontal vertical] field of view of scene camera (degrees)
+FOV=[60 46]; %[ horizontal vertical] field of view of scene camera (degrees
 
 % Default preload setting:
 maxThreads = [];
@@ -63,9 +62,8 @@ end
 
 
 %convert coordinates to visual angle
-data(:,7)=sqrt( (data(:,3)-data(:,5)).^2 )/(vidObj.Width/FOV(1));
-data(:,8)=sqrt( (data(:,4)-data(:,6)).^2 )/(vidObj.Height/FOV(2));
-data(:,9)=sqrt(data(:,7).^2+data(:,8).^2);
+vidObj.Height/fov(1)
+vidObj.Width/fov(2)
 
 
 Screen('CloseAll')
